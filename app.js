@@ -12,24 +12,41 @@ const add = function(arr){
     for(let i = 0; i < arr.length; i++){
         sum = sum + arr[i];
     }
-    console.log(sum);
+    return sum;
 }
 
-add(arr1);
-add(arr2);
-add(arr3);
-add(arr4);
+console.log(add(arr1));
+console.log(add(arr2));
+console.log(add(arr3));
+console.log(add(arr4));
 
 const numberOfTimes = prompt('How many students do you want to see?')
 const nameList = ['sally', 'sarah', 'betsy', 'sam', 'aretha', 'sun'];
+
+
 
 /* Write a function that takes in numberOfTimes and nameList as paramaters and returns
 the number of students entered in the prompt. For example if I type 2 into the prompt
 the function will return `sally, sarah`. Then console.log the function to see 
 the return. */
 
-
+const students = function(numberOfTimes, nameList){
+    let list = [];
+    for(let i = 0; i < numberOfTimes.length; i++){
+        list.push(nameList[i]);
+    }
+    return list;
+}
+console.log(students(numberOfTimes, nameList));
 
 /* Create a loop inside a function that sums the number from 1 to 172, inclusively.
 Save the sum in a global variable called total. Call the function.
 Console.log the total. */
+
+const addItUp = function(){
+    let total = 0;
+    for (let i=0; i < 172; i++){
+        total +=1;
+    }
+}
+console.log(addItUp());
